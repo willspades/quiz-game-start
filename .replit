@@ -7,3 +7,15 @@ channel = "stable-23_11"
 [deployment]
 run = ["python3", "main.py"]
 deploymentTarget = "cloudrun"
+
+[workflows]
+runButton = "Run Quiz Game"
+
+[[workflows.workflow]]
+name = "Run Quiz Game"
+author = 32527481
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 main.py"
