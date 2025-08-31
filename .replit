@@ -1,2 +1,9 @@
+
 modules = ["python-3.12"]
-run =
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["python3", "main.py"]
+deploymentTarget = "cloudrun"
